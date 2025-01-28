@@ -22,6 +22,31 @@ function renderUserList() {
         `;
         userList.appendChild(row);
     });
+} 
+
+// Add a new user to the list
+function addUser(user) {
+    users.push(user);
+    renderUserList();
+}  
+
+// Reset the form to add a new user
+function resetForm() {
+    document.getElementById('name').value = '';
+    document.getElementById('username').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('form-title').innerText = 'Add User';
+    document.getElementById('user-form').onsubmit = function (e) {
+        e.preventDefault();
+        const newUser = {
+            id: users.length ? users[users.length - 1].id + 1 : 1,  // Increment last ID or start at 1
+            name: document.getElementById('name').value,
+            username: document.getElementById('username').value,
+            email: document.getElementById('email').value
+        };
+        addUser(newUser);
+        resetForm();
+    };
 }
 
 // Fetch users from the API
