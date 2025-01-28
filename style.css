@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+} 
+.mainheading,.subheading{
+    display: flex;
+    justify-content: center;
+    
+} 
+
+
+h1,
+h2 {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table,
+th,
+td {
+    border: 2px solid #ddd;
+}
+
+th
+{
+    padding: 10px;
+    text-align: center;
+}  
+td{
+     padding:5px;
+}
+
+
+button {
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer; 
+    
+}
+
+button:hover {
+    background-color: #ddd;
+    color:green;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input {
+    padding: 8px;
+    margin: 5px;
+    width: 200px;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination button {
+    padding: 8px 16px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    margin: 0 10px;
+}
